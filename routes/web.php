@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 
  
 Route::get('/', function () {
-    return view('index');
-    // En web.php
-});
+    return view('login');
+})->name('login');
+
+Route::get('/register', function () {
+    return view('register');
+    
+})-> name('register');; 
+
